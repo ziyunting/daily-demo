@@ -13,6 +13,6 @@ i try my best to finish a small demo everyday
   [原生js实现乘法表](https://github.com/ziyunting/daily-demo/tree/master/day2%20%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8)  
   难度：易  
   项目重点  
-  1. 定时器的使用
+  1.定时器的使用  
   2.原生js动态添加元素  
   End in 2019.10.15  
