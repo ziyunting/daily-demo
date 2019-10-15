@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" value="" id="number">
+<input type="button" value="生成乘法表" onClick="result()">
+<input type="button" value="自动生成" onClick="startResult()">
+<input type="button" value="停止生成" onClick="stopResult()">
+<table id="tab">
+    <tbody>
+    </tbody>
+</table>
+<script>
+    function result() {
+        let num = document.getElementById('number').value;
+        if (!num) {
+            document.getElementById('number').focus();
+            alert('请输入一个数字');
+            return;
+        }
+        if (isNaN(num)) {
+            alert('请输入一个数字');
+            return;
+        }
+
+        //循环
+        let html = "";
+        for (let i = 1; i <= num; i++) {
+            html += "<tr>";
+            for (let j = 1; j <= i; j++) {
+                html += `<td>${j}*${i}=${i * j}</td>`
+            }
+            html += "</tr>";
+            document.getElementById('tab').innerHTML = html;
+        }
+    }
+
+    let interval = '';
+
+    function startResult() {
+        let num = 0;
+        interval = setInterval(function () {
+            num++;
+            document.getElementById('number').value = num;
+            result();
+        }, 600)
+    }
+
+    function stopResult() {
+        clearInterval(interval);
+    }
+
+</script>
+</body>
+</html>
