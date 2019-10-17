@@ -26,4 +26,12 @@ i try my best to finish a small demo everyday
   2.是否立即执行（也就是防抖时间是在函数执行前还是函数执行后）  
   3.是否具有返回值和取消函数  
   End in 2019.10.16  
+  #day4  
+  [代码实现节流函数]()  
+  难度：中  
+  项目简述
+  节流函数：函数在固定时间内只能执行一次操作。  
+  这里理解还比较吃力  等之后还要来重新理解  
+  [原文](https://github.com/mqyqingfeng/Blog/issues/26)
+  End in 2019.10.17
   
