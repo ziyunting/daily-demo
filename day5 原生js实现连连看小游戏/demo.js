@@ -139,23 +139,22 @@ function checkFinish() {
 
 // 检查是否能消除
 // 传入参数开始元素的行和列 方向改变次数 当前的方向 存放路径的数组
-function checkLine(row, col, changeTimes, nowToward, path) {
+function checkLine(row, col, changeTimes, nowToward) {
     if (isExist(row, col) && squareSet[row][col] == chooseTwo && changeTimes <= 3) {
         return true;
     }
     if (isExist(row, col) && squareSet[row][col] != chooseOne
         || changeTimes > 3
         || row < 0 || col < 0 || row >= squareSet.length || col >= squareSet[0].length
-        || path.indexOf(getLocaiton(row, col)) > -1) {
-        path.pop();
+        ) {
         return false;
     }
     path.push(getLocaiton(row, col));
     // 利用或连接 分别判断四个方向 有一个方向为true 返回true;
-    return checkLine(row - 1, col, nowToward == TowardEnum.UP ? changeTimes : changeTimes + 1, TowardEnum.UP, path) //up
-        || checkLine(row, col + 1, nowToward == TowardEnum.RIGHT ? changeTimes : changeTimes + 1, TowardEnum.RIGHT, path) //right
-        || checkLine(row + 1, col, nowToward == TowardEnum.DOWN ? changeTimes : changeTimes + 1, TowardEnum.DOWN, path) //right
-        || checkLine(row, col - 1, nowToward == TowardEnum.LEFT ? changeTimes : changeTimes + 1, TowardEnum.LEFT, path); //right;
+    return checkLine(row - 1, col, nowToward == TowardEnum.UP ? changeTimes : changeTimes + 1, TowardEnum.UP) //up
+        || checkLine(row, col + 1, nowToward == TowardEnum.RIGHT ? changeTimes : changeTimes + 1, TowardEnum.RIGHT) //right
+        || checkLine(row + 1, col, nowToward == TowardEnum.DOWN ? changeTimes : changeTimes + 1, TowardEnum.DOWN) //right
+        || checkLine(row, col - 1, nowToward == TowardEnum.LEFT ? changeTimes : changeTimes + 1, TowardEnum.LEFT); //right;
 }
 
 // 清除图片

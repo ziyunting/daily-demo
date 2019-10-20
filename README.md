@@ -34,4 +34,10 @@ i try my best to finish a small demo everyday
   这里理解还比较吃力  等之后还要来重新理解  
   [原文](https://github.com/mqyqingfeng/Blog/issues/26)
   End in 2019.10.17
-  
+  #day5  
+  [代码实现连连看小游戏]()
+  难度：难  
+  项目重点  
+  1.理解连连看核心递归算法  
+  2.学会使用模块化思想，单一职责原则  
+  End in 2019.10.20
