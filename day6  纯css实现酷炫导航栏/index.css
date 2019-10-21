@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #ccc;
+}
+
+.container {
+    width: 840px;
+    margin: 30px auto;
+}
+
+.container .menu {
+
+}
+
+.container .menu > li {
+    float: left;
+}
+.container .menu li {
+    width:140px;
+}
